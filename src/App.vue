@@ -2,16 +2,20 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
+    <MessageList :messages="messages" />
   </div>
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
+import MessageList from "./components/MessageList.vue"
 
 export default {
   name: "App",
+  data: () => ({ messages: ['Hey John', 'Howdy Paco']}),
   components: {
-    HelloWorld
+    HelloWorld,
+    MessageList
   }
 };
 </script>
